@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="54dp"
+        android:text="SUMA DE DOS NÚMEROS"
+        android:textColor="#D5E315"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="25dp"
+        android:text="Ingrese Número A"
+        android:textColor="#9A16EC"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/EditTextNumeroA"
+        app:layout_constraintEnd_toEndOf="@+id/EditTextNumeroA" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="22dp"
+        android:text="Ingrese Número B"
+        android:textColor="#10E1D9"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/EditTextNumeroB"
+        app:layout_constraintEnd_toEndOf="@+id/EditTextNumeroB" />
+
+    <TextView
+        android:id="@+id/TextViewRespuesta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Resultado:"
+        android:textColor="#20C51A"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BtnDivi" />
+
+    <Button
+        android:id="@+id/BntSuma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:onClick="BtnSumar"
+        android:text="SUMA"
+        app:layout_constraintBaseline_toBaselineOf="@+id/BtnMulti"
+        app:layout_constraintEnd_toStartOf="@+id/BtnMulti"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/BtnResta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="BtnResta"
+        android:text="RESTA"
+        app:layout_constraintBaseline_toBaselineOf="@+id/BtnMulti"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/BtnMulti" />
+
+    <Button
+        android:id="@+id/BtnMulti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="271dp"
+        android:onClick="BtnMulti"
+        android:text="MULTIPLICACIÓN"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/BtnResta"
+        app:layout_constraintStart_toEndOf="@+id/BntSuma" />
+
+    <Button
+        android:id="@+id/BtnDivi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="32dp"
+        android:onClick="BtnDivi"
+        android:text="DIVISIÓN"
+        app:layout_constraintStart_toStartOf="@+id/BtnMulti"
+        app:layout_constraintTop_toBottomOf="@+id/BtnMulti" />
+
+    <EditText
+        android:id="@+id/EditTextNumeroA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="23dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/EditTextNumeroB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="46dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/BntSuma"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
